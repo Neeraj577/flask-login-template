@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+{% include 'head.html' %}
+<title>{% block title %}My Site{% endblock %}</title>
+
+<body class="d-flex flex-column min-vh-100">
+
+
+    {% include 'nav.html' %}
+
+    <main class="container my-5">
+        {% block content %}
+        <!-- Default content goes here -->
+        {% endblock %}
+    </main>
+
+
+
+
+    <!-- Bootstrap JS Bundle -->
+
+    {% block scripts %}{% endblock %}
+    <!-- Footer at buttom -->
+    {% include 'footer.html' %}
+</body>
+
+</html>
