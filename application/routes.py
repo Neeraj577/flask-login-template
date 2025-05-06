@@ -1,7 +1,6 @@
-from flask import Flask, render_template, url_for
-
-app = Flask(__name__)
-
+# routes.py
+from application import app
+from flask import render_template
 
 @app.route("/")
 def home():
@@ -18,6 +17,3 @@ def about():
 @app.route("/register")
 def register():
     return render_template('register.html')
-    
-if __name__ == "__main__":
-    app.run()
